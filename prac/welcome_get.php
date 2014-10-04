@@ -1,8 +1,7 @@
 <html>
 <body>
-
-Welcome <?php echo $_GET["name"]; ?><br>
-Your email addres is: <?php echo $_GET["email"]; ?>
+<?php echo $_GET["name"]; ?><br>
+I am paying <?php echo $_GET["email"]; ?> for this service. 
 
 </body>
 </html>
