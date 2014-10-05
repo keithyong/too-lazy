@@ -9,8 +9,8 @@ $con=mysqli_connect("mydbinstance.czuwmj0nklpa.us-west-2.rds.amazonaws.com","kei
 		VALUES ('$email', '$pass')");
 	$result = mysqli_query($con,"SELECT * FROM Users");
 	
-	//while($row = mysqli_fetch_array($result)) {
-	  //echo $row['Email'] . " " . $row['myPassword'];
-	  //echo "<br>";
-	//}	
+	while($row = mysqli_fetch_array($result)) {
+	  echo $row['Email'] . " " . $row['myPassword'];
+	  echo "<br>";
+	}	
 	?>
