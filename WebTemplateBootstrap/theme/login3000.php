@@ -22,7 +22,7 @@ if(preg_match('/[a-zA-Z0-9_]+@udel\.edu/',$_POST["email"])){
 	  echo "<br>";
 	}	
 
-	header('\forum.html');
+	header(Location: 'forum.php');
 
 
 }
