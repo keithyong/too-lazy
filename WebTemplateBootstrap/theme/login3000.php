@@ -6,7 +6,7 @@ $con=mysqli_connect(
 	"mydbinstance.czuwmj0nklpa.us-west-2.rds.amazonaws.com",
 	"keithy",
 	"hackathon",
-	"innodb"
+	"db3"
 	);
 	$email = $_POST["email"];
 	$pass = $_POST["pass"];
