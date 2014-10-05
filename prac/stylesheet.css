@@ -1,0 +1,15 @@
+.want {
+	font-size: 20px;
+	font-family: Arial;
+	color: white;
+	background-color: gray;
+	border: solid 5px black;
+	border-radius: 5px;
+	padding: 10px;[]
+}
+ {
+	position: relative;
+	margin: 20px;
+	bottom: 50px;
+	text-align: right;
+}
