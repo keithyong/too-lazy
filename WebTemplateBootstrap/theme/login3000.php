@@ -14,6 +14,3 @@ $con=mysqli_connect("mydbinstance.czuwmj0nklpa.us-west-2.rds.amazonaws.com","kei
 	  //echo "<br>";
 	}	
 	?>
-	
-<?php
-
