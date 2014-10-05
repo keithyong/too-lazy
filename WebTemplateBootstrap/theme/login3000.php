@@ -28,5 +28,6 @@ if(preg_match('/[a-zA-Z0-9_]+@udel\.edu/',$_POST["email"])){
 }
 else {
 	echo "Only udel.edu emails accepted!";
+	
 }
 ?>
