@@ -3,7 +3,7 @@
 	mysqli_connect(
 		"mydbinstance.czuwmj0nklpa.us-west-2.rds.amazonaws.com",
 		"keithy",
-	"	hackathon",
+		"hackathon",
 		"innodb"
 		);
 	
@@ -21,7 +21,7 @@ $password = $_POST['pass'];
 $username = stripslashes($username);
 $password = stripslashes($password);
 
-$sql = "select * from users where username = '$username' and password = '$password'";
+$sql = "select * from users where Email = '$username' and myPassword = '$password'";
 $result = mysql_query($sql) or die ( mysql_error() );
 
 $count = 0;
