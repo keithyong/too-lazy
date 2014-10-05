@@ -18,6 +18,7 @@
 		  		<input type="text" class="form-control" id="money" name="price" placeholder="And I'm for it I am paying...">
 		  	</div>
 		  	<button type="submit" class="btn btn-default">Submit</button>
+		</form>
 		  	<?php
 		  		$host = "mydbinstance.czuwmj0nklpa.us-west-2.rds.amazonaws.com";
 		  		$username = "keithy";
@@ -36,30 +37,44 @@
 				mysqli_query($con, "INSERT INTO forums (paragraph, price)
 					 VALUES ('$submission', '$price')");
 					 ?>
-			<div class="container-fluid">
-    			<div class="row-fluid">
-      				<div class="span4 offset4">
-						<?php
-					  		$host = "mydbinstance.czuwmj0nklpa.us-west-2.rds.amazonaws.com";
-					  		$username = "keithy";
-					  		$password = "hackathon";
-					  		$dbname = "db64";
+				  <div class="container">
+				    <table class="table">
+				      <thead>
+				        <tr>
+				          <th>Posting</th>
+				 
+				          <th>Price</th>
+				 
+				        </tr>
+				      </thead>
+				 
+				      <tbody>
+				      	<?php
+				      	$host = "mydbinstance.czuwmj0nklpa.us-west-2.rds.amazonaws.com";
+				  		$username = "keithy";
+				  		$password = "hackathon";
+				  		$dbname = "db64";
+				      	mysql_connect($host, $username, $password) or die(mysql_error());
+				      	mysql_select_db("db64") or die(mysql_error());
+				      	$result = mysql_query("SELECT * FROM forums") or die(mysql_error());
 
-					  		$con=mysqli_connect($host, $username, $password, $dbname);
-
-					  		// Check connection
-							if (mysqli_connect_errno()) {
-							  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-							}
-							$result = mysqli_query($con,"SELECT * FROM forums");
-							while($row = mysqli_fetch_array($result)) {
-								echo $row['submission'] . " " . $row['price'];
-								echo "<br>";
-							}
-					  	?>
+				      	 while ($row = mysql_fetch_array($result)) {
+			                // Print out the contents of the entry 
+			                echo '<tr>';
+			                echo '<td>' . $row['paragraph'] . '</td>';
+			                echo '<td>' . $row['price'] . '</td>';
+			            }
+				      	?>
+				        <tr>
+				          <td>sdsd</td>
+				        </tr>
+				      </tbody>
+				 
+				      <tbody></tbody>
+				    </table>
+				  </div><!-- /container -->
 		  			</div>
     			</div>
 			</div>
-		</form>
 	</body>
 </html>
