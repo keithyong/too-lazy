@@ -1,6 +1,8 @@
 <html>
 <body>
 <?php
+ini_set("display_errors",1);
+error_reporting(-1);
 $db_host = "mydbinstance.czuwmj0nklpa.us-west-2.rds.amazonaws.com";
 $db_user = "keithy";
 $db_password = "hackathon";
