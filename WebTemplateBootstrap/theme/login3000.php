@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
 ini_set("display_errors",1);
 error_reporting(-1);
@@ -30,5 +32,7 @@ else {
 	echo "Only udel.edu emails accepted!";
 	
 }
-header(Location: 'forum.php');
 ?>
+<a href="forum.php">Go to forums</a>
+</body>
+</html>
