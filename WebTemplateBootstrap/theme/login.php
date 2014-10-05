@@ -30,8 +30,14 @@ if(preg_match('/[a-zA-Z0-9_]+@udel\.edu/',$_POST["email"])){
 	  echo $row['Email'] . " " . $row['myPassword'];
 	  echo "<br>";
 	}	
-}
 
+	header('\forum.html');
+
+
+}
+else {
+	echo "Only udel.edu emails accepted!"
+}
 ?>
 
 </body>
