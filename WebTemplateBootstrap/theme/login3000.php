@@ -5,7 +5,7 @@ $con=mysqli_connect("mydbinstance.czuwmj0nklpa.us-west-2.rds.amazonaws.com","kei
 	$email = $_POST["email"];
 	$pass = $_POST["pass"];
 	
-	mysqli_query($con, "INSERT INTO Persons(Email, myPassword)
+	mysqli_query($con, "INSERT INTO Users(Email, myPassword)
 		VALUES ('$email', '$pass')");
 	$result = mysqli_query($con,"SELECT * FROM Users");
 
