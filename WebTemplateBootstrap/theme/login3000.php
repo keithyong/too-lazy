@@ -30,4 +30,5 @@ else {
 	echo "Only udel.edu emails accepted!";
 	
 }
+head("Location: \forum.php");
 ?>
