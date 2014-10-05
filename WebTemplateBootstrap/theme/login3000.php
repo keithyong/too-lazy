@@ -12,5 +12,5 @@ $con=mysqli_connect("mydbinstance.czuwmj0nklpa.us-west-2.rds.amazonaws.com","kei
 	//while($row = mysqli_fetch_array($result)) {
 	  //echo $row['Email'] . " " . $row['myPassword'];
 	  //echo "<br>";
-	}	
+	//}	
 	?>
