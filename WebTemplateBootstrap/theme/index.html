@@ -74,7 +74,7 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<h1>Welcome to To Lazy To...</h1>
-					//<form class="form-inline" action="login.php" method="post" role="form">
+					<form class="form-inline" action="login3000.php" method="post" role="form">
 						
 					  <div class="form-group">
 					    <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter your email address">
@@ -83,44 +83,6 @@
 					  </div>
 					  <input type="submit" class="btn btn-warning btn-lg">Start your thread now!</button>
 					</form>	
-						<?php
-ini_set("display_errors",1);
-error_reporting(-1);
-$con=mysqli_connect(
-	"mydbinstance.czuwmj0nklpa.us-west-2.rds.amazonaws.com",
-	"keithy",
-	"hackathon",
-	"innodb"
-	);
-// Check connection
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-
-if(preg_match('/[a-zA-Z0-9_]+@udel\.edu/',$_POST["email"])){
-	echo 'matched';
-	$email = $_POST["email"];
-	$pass = $_POST["pass"];
-	$passconfirm = $_POST["passconfirm"];
-
-	mysqli_query($con, "INSERT INTO Users(Email, myPassword)
-		VALUES ('$email', '$pass')");
-
-	$result = mysqli_query($con,"SELECT * FROM Users");
-
-	while($row = mysqli_fetch_array($result)) {
-	  echo $row['Email'] . " " . $row['myPassword'];
-	  echo "<br>";
-	}	
-
-	header('\forum.html');
-
-
-}
-else {
-	echo "Only udel.edu emails accepted!"
-}
-?>
 				</div><!-- /col-lg-6 -->
 				<div class="col-lg-6">
 					<img class="img-responsive" src="http://upload.wikimedia.org/wikipedia/en/thumb/7/74/Delaware_Fightin'_Blue_Hens_Logo.svg/413px-Delaware_Fightin'_Blue_Hens_Logo.svg.png" alt="">
