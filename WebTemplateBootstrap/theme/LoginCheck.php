@@ -5,11 +5,11 @@ $pass = $_POST["pass"];
 $result = mysqli_query($con,"SELECT myPassword FROM Users WHERE Email = $email"); //query for search,add,insert
  
 	if ($pass == $result) {
-	//header("Location:login3000.php");
-	echo "Valid Username";
+	$SESSION['login'] = TRUE;
+	header("Location: http://ec2-54-69-153-93.us-west-2.compute.amazonaws.com/TemplateForAboutUs/Theme/index.html");
 	}
 	else {
-	//ader("Location: index.html");
-	echo "Invalid Username and password";
+	header("Location: index.html");
+
 	}
 ?>
