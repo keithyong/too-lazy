@@ -1,5 +1,4 @@
-<html>
-<body>
+
 <?php 
 // Check connection
 $con=mysqli_connect(
@@ -20,5 +19,7 @@ $con=mysqli_connect(
 	  echo "<br>";
 	}	
 	?>
-	</body>
-	</html>
+	
+<?php
+session.start();
+requir

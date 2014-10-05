@@ -13,7 +13,7 @@ $pass = $_POST['pass'];
 @mysql_connect("$db_host","$db_user","$db_password") or die ("Could not connect to MySQL");
 @mysql_select_db("$db_name")
 echo "Successful Connection";
-mysqli_query($con, "INSERT INTO $db_name(Email, myPassword)
+mysqli_query($con, "INSERT INTO Persons (Email, myPassword)
 		VALUES ('$email', '$pass')");
 		
 		$result = mysqli_query($mysqli,"SELECT * FROM $db_name");
